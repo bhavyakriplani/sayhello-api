@@ -1,11 +1,11 @@
 const express = require('express');
 const app = express();
-const PORT = 80; // Running on port 80
+const port = 80;
 
 app.get('/sayHello', (req, res) => {
-    res.json({ message: "Hello User" });
+    res.status(200).json({ message: "Hello User" });
 });
 
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+app.listen(port, () => {
+    console.log(`API running on http://localhost:${port}`);
 });
